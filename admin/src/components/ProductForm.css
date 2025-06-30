@@ -1,0 +1,68 @@
+/* ProductForm.css */
+.product-page {
+  position: relative;
+  min-height: 100vh;
+  width: 200vh;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-bg-animation {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+
+  animation: bgMove 10s linear infinite;
+  z-index: 0;
+}
+
+.product-form {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+}
+
+.product-form h2 {
+  margin-bottom: 20px;
+  color: #e76f51;
+  text-align: center;
+}
+
+.product-form input {
+  width: 95.3%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.product-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #e76f51;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@keyframes bgMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-10%, -10%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

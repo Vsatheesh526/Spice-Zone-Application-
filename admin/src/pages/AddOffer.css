@@ -1,0 +1,114 @@
+/* Full-page background with animation */
+.offer-page {
+  height: 100vh;
+  width: 200vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated circles background */
+.animated-bg::before,
+.animated-bg::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+  animation: float 10s linear infinite;
+}
+
+.animated-bg::before {
+  width: 500px;
+  height: 300px;
+  top: -100px;
+  left: -100px;
+}
+
+.animated-bg::after {
+  width: 200px;
+  height: 200px;
+  bottom: -80px;
+  right: -80px;
+}
+
+@keyframes float {
+  0% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.2) translateY(-20px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+/* Form styles */
+.offer-form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.offer-form h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.offer-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.offer-form input:focus {
+  border-color: #d35400;
+  outline: none;
+}
+
+.offer-form button {
+  width: 100%;
+  padding: 12px;
+  background: #d35400;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.offer-form button:hover {
+  background: #e67e22;
+}
+
+.offer-form button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.error {
+  background-color: #f2dede;
+  color: #a94442;
+}

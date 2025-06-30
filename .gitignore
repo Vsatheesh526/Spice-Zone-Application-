@@ -1,0 +1,21 @@
+# Root .gitignore - applies to all subfolders
+
+# Node
+node_modules/
+npm-debug.log
+
+# Environment
+.env
+*.env
+
+# Build
+build/
+dist/
+.next/
+
+# IDE
+.vscode/
+.idea/
+
+# System
+.DS_Store

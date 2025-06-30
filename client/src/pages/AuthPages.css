@@ -1,0 +1,449 @@
+/* Center the login form */
+html{
+    scroll-behavior: smooth;        
+}
+.center-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+.auth-container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 24px 24px 24px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background:#E2E8DD;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  position: relative;
+  pointer-events: all;
+}
+.auth-form label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.auth-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  font-size: 1em;
+}
+.auth-form button {
+  padding: 8px 16px;
+  background: #d35400;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.auth-form button:hover {
+  background: #b34700;
+}
+.auth-message {
+  color: green;
+  margin-top: 16px;
+}
+.auth-link {
+  margin-top: 16px;
+  text-align: center;
+}
+.close-btn {
+  color: #888;
+  transition: color 0.2s;
+}
+.close-btn:hover {
+  color: #f00;
+}
+
+/* Navbar */
+.navbar {
+  background: #0a0908;
+  color: #fff;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.navbar-section {
+  display: flex;
+  align-items: center;
+}
+.navbar-left {
+  margin-left: 32px;
+}
+.navbar-logo {
+  height: 34px;
+  width: 34px;
+  margin-right: 8px;
+}
+.navbar-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.navbar-center {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+.navbar-center li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.navbar-center li a:hover {
+  text-decoration: underline;
+  color: #ffd700;
+}
+.navbar-right {
+  margin-right: 32px;
+}
+.login-nav-btn {
+  background: none;
+  border: none;
+  color: #ffd700;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0 12px;
+  transition: color 0.2s;
+}
+.login-nav-btn:hover {
+  color: #f5f4f1;
+  text-decoration: underline;
+}
+
+/* Homepage sections */
+.homepage {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.bg-img{
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #ffa200;
+  overflow: hidden;
+}
+.homepage-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px 0 0 0;
+  background: rgba(255, 255, 255, 0);
+  min-height: 100vh;
+}
+.welcome-header {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.brand-name {
+  color: #ffd700;
+  font-weight: bold;
+}
+.products-section, .services-section, .reviews-section{
+  margin: 40px auto;
+  max-width: 1100px;
+  background: rgba(255, 255, 255, 0);
+  color: white;
+  border-radius: 12px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+/* Product Showcase Section */
+.products-section {
+  margin: 20px auto;
+  max-width: 1200px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.10);
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.product-card {
+  background: #0a0908;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(211, 84, 0, 0.10);
+  padding: 20px 18px 18px 18px;
+  text-align: center;
+  width: 210px;
+  transition: transform 0.5s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border:1.5px solid white;
+}
+
+.product-card:hover {
+  transform: translateY(-10px) scale(1);
+  box-shadow: 0 8px 32px rgba(211, 84, 0, 0.18);
+  border: 1.5px solid #ffd700;
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.product-card h3 {
+  margin: 10px 0 6px 0;
+  font-size: 1.15em;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.product-price {
+  color: #ffd449;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.hr{
+  color: #ffd449;
+  width: 300px;
+}
+
+@media (max-width: 900px) {
+  .products-list {
+    gap: 18px;
+  }
+  .product-card {
+    width: 170px;
+    padding: 14px 8px;
+  }
+  .product-card img {
+    height: 100px;
+  }
+}
+/* Services Section */
+.services-section {
+  margin: 40px auto;
+  max-width: 1100px;
+  background: rgba(0, 0, 0, 0.573);
+  border-radius: 16px;
+  padding: 32px 24px;
+  
+  color:rgb(255, 196, 0);
+}
+
+.services-list {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.service-card {
+  background: #fff8e1;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(211, 84, 0, 0.10);
+  padding: 28px 22px 22px 22px;
+  text-align: center;
+  width: 260px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  border: 1.5px solid #ffe0b2;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(211, 84, 0, 0.18);
+  border-color: #ffd700;
+  background: #fffbe7;
+}
+
+.service-icon {
+  font-size: 2.8em;
+  margin-bottom: 14px;
+  color: #d35400;
+}
+
+.service-card h3 {
+  margin: 10px 0 8px 0;
+  font-size: 1.18em;
+  color: #4000ff;
+  font-weight: bold;
+}
+
+.service-card p {
+  color: #444;
+  font-size: 1em;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .services-list {
+    gap: 18px;
+  }
+  .service-card {
+    width: 180px;
+    padding: 16px 8px;
+  }
+  .service-icon {
+    font-size: 2em;
+  }
+}
+.reviews-list{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+
+}
+.review-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 16px;
+  text-align: center;
+  width: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+  height: auto;
+  gap: 10px;
+  color: black;
+}
+@media screen and (max-width:700px) {
+  .reviews-list{
+    display:flex;
+    flex-direction: column;
+  }
+  
+  
+}
+.review-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #ffd700;
+}
+.about-section {
+  text-align: center;
+  color: #ffffff;
+  background-color: black;
+  padding: 10px;
+}
+
+.services-title {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #ffd700;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* Mobile styles (420px and below) */
+/* Mobile Navigation (420px and below) */
+@media only screen and (max-width: 420px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Your existing gradient */
+  }
+
+  .navbar-section {
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .navbar-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-center {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .navbar-center.active {
+    max-height: 300px;
+  }
+
+  .navbar-center ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .navbar-center li {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .navbar-center li a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    color: white;
+    font-weight: 500;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+
+  .navbar-right {
+    display: none;
+  }
+
+  .navbar-center.active + .navbar-right {
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .login-nav-btn {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid white;
+  }
+}
