@@ -25,20 +25,11 @@ SpiceZone is a professional and responsive **food catering web application** bui
 
 ```
 SpiceZone/
-│── client/                 # React frontend
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── App.js
-│   │   └── index.js
-│
-│── server/                 # Express backend
-│   ├── config/
-│   ├── models/
-│   ├── routes/
-│   ├── controllers/
-│   ├── server.js
+│── admin/         # Admin-related code (dashboards, management, etc.)
+│── client/        # Frontend (React/Next.js or similar for user interface)
+│── food-images/   # Image assets for food items
+│── server/        # Backend (Node.js/Express, APIs, database handling)
+
 │
 │── README.md
 │── package.json
@@ -113,7 +104,7 @@ npm start
 For queries or contributions:
 
 * **Author:** Satheesh
-* **Email:** [your-email@example.com](mailto:your-email@example.com)
-* **GitHub:** [your-profile](https://github.com/your-username)
+* **Email:** [satheeshvadla@gmail.com](mailto:your-email@example.com)
+* **GitHub:** [your-profile](https://github.com/Vsatheesh526/)
 
 
